@@ -60,7 +60,7 @@ export function Home() {
         return res.json();
       })
       .then((result) => {
-          console.log(result);
+        console.log(result);
         if (result.length === 0) {
           if (check === true) {
             setCounting(num);
@@ -73,9 +73,26 @@ export function Home() {
 
         setGridData(result);
         const dateString = result[0].createdDate;
-        const currentDate = new Date();
-        const preDate = new Date(dateString);
+        console.log("dateString", dateString);
+        var date = new Date(dateString);
 
+        // Formatting the date into the desired format
+        var formattedDate =
+          date.getFullYear() +
+          "-" +
+          ("0" + (date.getMonth() + 1)).slice(-2) +
+          "-" +
+          ("0" + date.getDate()).slice(-2) +
+          " " +
+          ("0" + date.getHours()).slice(-2) +
+          ":" +
+          ("0" + date.getMinutes()).slice(-2) +
+          ":" +
+          ("0" + date.getSeconds()).slice(-2);
+        console.log("formattedDate", formattedDate);
+        const currentDate = new Date();
+        const preDate = new Date(formattedDate);
+        console.log(preDate.getMinutes(), "preDate");
         const preminutes = preDate.getMinutes();
         const preseconds = preDate.getSeconds();
 
