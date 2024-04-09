@@ -16,7 +16,7 @@ function FormRow({ prop }) {
   return (
     <React.Fragment>
       <Grid item xs={3}>
-        <Item>{prop.id}</Item>
+        <Item>{prop._id}</Item>
       </Grid>
       <Grid item xs={3}>
         {prop.randomNumber > 5 ? (
