@@ -98,7 +98,7 @@ export function Home() {
 
         const curMinutes = currentDate.getMinutes();
         const curSeconds = currentDate.getSeconds();
-
+        console.log("curMinutes", curMinutes);
         // console.log(preminutes, preseconds);
         // console.log(curMinutes, curSeconds);
         // console.log(dateString)
@@ -110,7 +110,8 @@ export function Home() {
           curSeconds
         );
         // console.log("totalSeconds", totalSeconds);
-        const secResult = 60 - totalSeconds;
+        const secResult = 55 - totalSeconds;
+        console.log("secResult", secResult);
         setCounting(secResult);
         if (secResult === 59) {
           const winNumber = result[0].randomNumber;
