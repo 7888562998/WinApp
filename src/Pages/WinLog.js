@@ -6,7 +6,7 @@ export function WinLog() {
   const [gridData, setGridData] = useState("");
 
   function getResultList() {
-    const url = "https://localhost:7212/api/Win/get-win-list";
+    const url = "https://win-api.vercel.app/api/win-list";
     const data = getData(url);
     data
       .then((res) => {

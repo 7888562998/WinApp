@@ -53,7 +53,7 @@ export function Home() {
   var check = true;
   var num = 60;
   function getResultList() {
-    const url = "https://localhost:7212/api/Win/get-ten-records";
+    const url = "https://win-api.vercel.app/api/get-ten-records";
     const data = getData(url);
     data
       .then((res) => {
